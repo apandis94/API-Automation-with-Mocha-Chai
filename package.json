@@ -2,9 +2,9 @@
   "name": "api-automation-with-mocha-chai",
   "version": "1.0.0",
   "description": "API Automation With Mocha Chai",
-  "main": "index.js",
+  "main": "Post.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "chai": "^4.3.7",
     "jsonschema": "^1.4.1",
+    "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   }
 }
