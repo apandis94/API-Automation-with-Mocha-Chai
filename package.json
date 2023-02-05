@@ -1,0 +1,28 @@
+{
+  "name": "api-automation-with-mocha-chai",
+  "version": "1.0.0",
+  "description": "API Automation With Mocha Chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apandis94/API-Automation-with-Mocha-Chai.git"
+  },
+  "keywords": [
+    "APi",
+    "Mocha"
+  ],
+  "author": "Apandi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apandis94/API-Automation-with-Mocha-Chai/issues"
+  },
+  "homepage": "https://github.com/apandis94/API-Automation-with-Mocha-Chai#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "jsonschema": "^1.4.1",
+    "supertest": "^6.3.3"
+  }
+}
