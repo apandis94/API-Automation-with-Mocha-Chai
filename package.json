@@ -2,9 +2,9 @@
   "name": "api-automation-with-mocha-chai",
   "version": "1.0.0",
   "description": "API Automation With Mocha Chai",
-  "main": "Post.js",
+  "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
