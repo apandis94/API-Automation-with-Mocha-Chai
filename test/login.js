@@ -1,15 +1,21 @@
 const request = require("supertest");
 const { expect } = require("chai");
 
+var login = {
+  name: "Kelontong Murah",
+  email: "kelontong.murah@gmail.com",
+  password: "SUKAJAYA10",
+};
+
 describe("Regist Toko in Casier Aja", () => {
-  const response = request("https://kasir-api.belajarqa.com").post("/registration").send({
-    name: "Kelontong Murah",
-    email: "kelontong.murah@gmail.com",
-    password: "SUKAJAYA10",
-  });
+  let email;
+  const response = request("https://kasir-api.belajarqa.com").post("/registration").send(login);
   it("Find Status and Body", async () => {
     console.log((await response).status);
     console.log((await response).body);
+    email = (await response).body.data.email;
+    console.log("-----------//------------");
+    console.log("email adalah = " + email);
   });
 
   it("Equal Status must be 201", async () => {
