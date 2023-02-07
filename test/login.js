@@ -3,6 +3,8 @@ const { expect } = require("chai");
 
 var password = "SUKAJAYA10";
 var email1 = "kelontong.murah@gmail.com";
+
+// Request Body
 var login = {
   name: "Kelontong Murah",
   email: email1,
@@ -14,6 +16,13 @@ var auth = {
   password: password,
 };
 
+var user = {
+  name: "Task 1 Sanber",
+  email: "task1sanber@gmail.com",
+  password: "SUKAJAYA10",
+};
+
+// Global var
 let email;
 let token;
 
@@ -46,6 +55,23 @@ describe("Get Auth", () => {
     token = (await response).body.data.accessToken;
     console.log("-----------//------------");
     console.log("akses token adalah = " + token);
+  });
+
+  it("Equal Status must be 201", async () => {
+    expect((await response).status).to.equal(201);
+  });
+});
+
+describe("Regist User", () => {
+  const response = request("https://kasir-api.belajarqa.com")
+    .post("/users")
+    .send(user)
+    .set({
+      Authorization: `Bearer ${token}`,
+    });
+  it("Find Status and Body", async () => {
+    console.log((await response).status);
+    console.log((await response).body);
   });
 
   it("Equal Status must be 201", async () => {
