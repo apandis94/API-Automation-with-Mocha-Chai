@@ -4,7 +4,9 @@
   "description": "API Automation With Mocha Chai",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,8 @@
     "jsonschema": "^1.4.1",
     "mocha": "^10.2.0",
     "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
   }
 }

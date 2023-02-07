@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-07T07:10:29.612Z",
+    "end": "2023-02-07T07:10:32.266Z",
+    "duration": 2654,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5ed7a87c-5017-4800-a52d-4e4f1d1ff4ec",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d6c98e3-c7e4-45bb-ae01-4debe25c01b3",
+          "title": "Regist Toko in Casier Aja",
+          "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\login.js",
+          "file": "\\test\\login.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Find Status and Body",
+              "fullTitle": "Regist Toko in Casier Aja Find Status and Body",
+              "timedOut": false,
+              "duration": 479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log((await response).status);\nconsole.log((await response).body);",
+              "err": {},
+              "uuid": "a88c87d0-06f6-4f7d-a780-738823b391ac",
+              "parentUUID": "0d6c98e3-c7e4-45bb-ae01-4debe25c01b3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Equal Status must be 201",
+              "fullTitle": "Regist Toko in Casier Aja Equal Status must be 201",
+              "timedOut": false,
+              "duration": 3,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect((await response).status).to.equal(201);",
+              "err": {},
+              "uuid": "578a33e2-789e-47c7-87cd-ed11956f3e6c",
+              "parentUUID": "0d6c98e3-c7e4-45bb-ae01-4debe25c01b3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Equal Massage must be Toko berhasil di daftarkan and get feedback",
+              "fullTitle": "Regist Toko in Casier Aja Equal Massage must be Toko berhasil di daftarkan and get feedback",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect((await response).body.status).to.equal(\"success\");\nexpect((await response).body.message).to.equal(\"Toko berhasil didaftarkan\");\nexpect((await response).body.data.name).to.equal(\"Kelontong Murah\");",
+              "err": {},
+              "uuid": "cc9e987e-4782-4ddc-98ee-2131494b5f0b",
+              "parentUUID": "0d6c98e3-c7e4-45bb-ae01-4debe25c01b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a88c87d0-06f6-4f7d-a780-738823b391ac",
+            "578a33e2-789e-47c7-87cd-ed11956f3e6c",
+            "cc9e987e-4782-4ddc-98ee-2131494b5f0b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 483,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bcf6f4d8-e295-4187-88be-210eff5b3398",
+          "title": "Get Request example",
+          "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\post.js",
+          "file": "\\test\\post.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Find Pets by Status",
+              "fullTitle": "Get Request example Find Pets by Status",
+              "timedOut": false,
+              "duration": 1070,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log((await response).status);\nconsole.log((await response).body);",
+              "err": {},
+              "uuid": "4f591d38-1366-4f79-8c39-eea575b9df37",
+              "parentUUID": "bcf6f4d8-e295-4187-88be-210eff5b3398",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Equal Status must be 200",
+              "fullTitle": "Get Request example Equal Status must be 200",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect((await response).status).to.equal(200);",
+              "err": {},
+              "uuid": "c994e6ca-34d4-4514-8978-c36b33a10ae7",
+              "parentUUID": "bcf6f4d8-e295-4187-88be-210eff5b3398",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f591d38-1366-4f79-8c39-eea575b9df37",
+            "c994e6ca-34d4-4514-8978-c36b33a10ae7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1071,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "038305c0-6123-4181-8fc0-5825e6e728fa",
+          "title": "Post Request Example",
+          "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\post.js",
+          "file": "\\test\\post.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success create user",
+              "fullTitle": "Post Request Example Success create user",
+              "timedOut": false,
+              "duration": 1055,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log((await response).status);\nconsole.log((await response).body);\nexpect((await response).body.message).to.equal(\"12345\");",
+              "err": {},
+              "uuid": "e891f98d-d9b8-4db1-8dda-a922cd4f2bd4",
+              "parentUUID": "038305c0-6123-4181-8fc0-5825e6e728fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e891f98d-d9b8-4db1-8dda-a922cd4f2bd4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1055,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
