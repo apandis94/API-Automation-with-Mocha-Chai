@@ -63,13 +63,8 @@ describe("Get Auth", () => {
 });
 
 describe("Regist User", () => {
-  const response = request("https://kasir-api.belajarqa.com")
-    .post("/users")
-    .send(user)
-    .set({
-      Authorization: `Bearer ${token}`,
-    });
   it("Find Status and Body", async () => {
+    const response = request("https://kasir-api.belajarqa.com").post("/users").send(user).set("Authorization", `Bearer ${token}`);
     console.log((await response).status);
     console.log((await response).body);
   });

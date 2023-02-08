@@ -23,12 +23,13 @@
   },
   "homepage": "https://github.com/apandis94/API-Automation-with-Mocha-Chai#readme",
   "dependencies": {
-    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "jsonschema": "^1.4.1",
     "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
     "mochawesome": "^7.1.3"
   }
 }
