@@ -3,14 +3,12 @@ const { expect } = require("chai");
 const auth = require("../data/auth.json");
 const login = require("../data/login.json");
 const user = require("../data/user.json");
+const update = require("../data/update.json");
 
 // Global var
 let email;
 let token;
 let UserID;
-let data = "data ini adalah ";
-
-localStorage.setItem("email", "token", "UserID", "data");
 
 describe("Regist Toko in Casier Aja", () => {
   const response = request("https://kasir-api.belajarqa.com").post("/registration").send(login);
@@ -56,6 +54,22 @@ describe("Regist User", () => {
 
   it("Get User Detail", async () => {
     const response = request("https://kasir-api.belajarqa.com").get(`/users/${UserID}`).set("Authorization", `Bearer ${token}`);
+    console.log("status adalah = " + (await response).status);
+    console.log("Response Body = ");
+    console.log((await response).body);
+    expect((await response).status).to.equal(200);
+  });
+
+  it("Update Data", async () => {
+    const response = request("https://kasir-api.belajarqa.com").put(`/users/${UserID}`).send(update).set("Authorization", `Bearer ${token}`);
+    console.log("status adalah = " + (await response).status);
+    console.log("Response Body = ");
+    console.log((await response).body);
+    expect((await response).status).to.equal(200);
+  });
+
+  it("Delete Data", async () => {
+    const response = await request("https://kasir-api.belajarqa.com").del(`/users/${UserID}`).set("Authorization", `Bearer ${token}`);
     console.log("status adalah = " + (await response).status);
     console.log("Response Body = ");
     console.log((await response).body);
