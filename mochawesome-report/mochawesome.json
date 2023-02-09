@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 4,
-    "tests": 8,
-    "passes": 8,
+    "tests": 9,
+    "passes": 9,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-07T08:31:50.992Z",
-    "end": "2023-02-07T08:31:55.608Z",
-    "duration": 4616,
-    "testsRegistered": 8,
+    "start": "2023-02-09T06:26:42.198Z",
+    "end": "2023-02-09T06:26:47.111Z",
+    "duration": 4913,
+    "testsRegistered": 9,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1117f207-29ee-493b-a676-d95533974764",
+      "uuid": "32819c0e-f5a7-4b9e-95e4-bbe4ef2e30d3",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "550de908-f607-43aa-a6e9-d261592440b0",
+          "uuid": "29a57319-a66a-48ef-9b74-cc9e5e03264e",
           "title": "Regist Toko in Casier Aja",
           "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\login.js",
           "file": "\\test\\login.js",
@@ -38,7 +38,7 @@
               "title": "Find Status and Body",
               "fullTitle": "Regist Toko in Casier Aja Find Status and Body",
               "timedOut": false,
-              "duration": 1529,
+              "duration": 736,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "console.log((await response).status);\nconsole.log((await response).body);\nemail = (await response).body.data.email;\nconsole.log(\"-----------//------------\");\nconsole.log(\"email adalah = \" + email);",
               "err": {},
-              "uuid": "d04556d8-6e4e-41cc-a4a7-2286c9070196",
-              "parentUUID": "550de908-f607-43aa-a6e9-d261592440b0",
+              "uuid": "2abc8e9f-cbc2-4328-8bdd-2512179dfcd6",
+              "parentUUID": "29a57319-a66a-48ef-9b74-cc9e5e03264e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Equal Status must be 201",
               "fullTitle": "Regist Toko in Casier Aja Equal Status must be 201",
               "timedOut": false,
-              "duration": 2,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "expect((await response).status).to.equal(201);",
               "err": {},
-              "uuid": "1862c47e-5be7-4d25-b92d-1f766c954de5",
-              "parentUUID": "550de908-f607-43aa-a6e9-d261592440b0",
+              "uuid": "7f879d39-ac4e-4a61-9b8f-c7e996c9a0a7",
+              "parentUUID": "29a57319-a66a-48ef-9b74-cc9e5e03264e",
               "isHook": false,
               "skipped": false
             },
@@ -74,48 +74,48 @@
               "title": "Equal Massage must be Toko berhasil di daftarkan and get feedback",
               "fullTitle": "Regist Toko in Casier Aja Equal Massage must be Toko berhasil di daftarkan and get feedback",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "expect((await response).body.status).to.equal(\"success\");\nexpect((await response).body.message).to.equal(\"Toko berhasil didaftarkan\");\nexpect((await response).body.data.name).to.equal(\"Kelontong Murah\");",
+              "code": "expect((await response).body.status).to.equal(\"success\");\nexpect((await response).body.message).to.equal(\"Toko berhasil didaftarkan\");\nexpect((await response).body.data.name).to.equal(\"Kelontong Murah\");\nexpect((await response).body.data.name).not.to.be.null;",
               "err": {},
-              "uuid": "856d3f77-d86b-413e-8048-96db290302c9",
-              "parentUUID": "550de908-f607-43aa-a6e9-d261592440b0",
+              "uuid": "b36c6bb4-fd6a-412a-b07a-729d5143b08a",
+              "parentUUID": "29a57319-a66a-48ef-9b74-cc9e5e03264e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d04556d8-6e4e-41cc-a4a7-2286c9070196",
-            "1862c47e-5be7-4d25-b92d-1f766c954de5",
-            "856d3f77-d86b-413e-8048-96db290302c9"
+            "2abc8e9f-cbc2-4328-8bdd-2512179dfcd6",
+            "7f879d39-ac4e-4a61-9b8f-c7e996c9a0a7",
+            "b36c6bb4-fd6a-412a-b07a-729d5143b08a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1531,
+          "duration": 738,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 2000
+          "_timeout": 10000
         },
         {
-          "uuid": "d8903105-e2c9-48d6-9fc2-ab8bcea43798",
-          "title": "Get Auth",
+          "uuid": "fa8357a1-b455-407a-a455-e707da217d30",
+          "title": "Regist User",
           "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\login.js",
           "file": "\\test\\login.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Find Status and Body",
-              "fullTitle": "Get Auth Find Status and Body",
+              "title": "Geth Auth",
+              "fullTitle": "Regist User Geth Auth",
               "timedOut": false,
-              "duration": 406,
+              "duration": 661,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -124,45 +124,64 @@
               "context": null,
               "code": "console.log((await response).status);\nconsole.log((await response).body);\ntoken = (await response).body.data.accessToken;\nconsole.log(\"-----------//------------\");\nconsole.log(\"akses token adalah = \" + token);",
               "err": {},
-              "uuid": "e32c4933-c45f-4e8a-871a-85e075d0673b",
-              "parentUUID": "d8903105-e2c9-48d6-9fc2-ab8bcea43798",
+              "uuid": "b4a8bfb6-4e13-4a66-9815-0f84e5710bff",
+              "parentUUID": "fa8357a1-b455-407a-a455-e707da217d30",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "Equal Status must be 201",
-              "fullTitle": "Get Auth Equal Status must be 201",
+              "title": "Create User",
+              "fullTitle": "Regist User Create User",
               "timedOut": false,
-              "duration": 0,
+              "duration": 726,
               "state": "passed",
-              "speed": "fast",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "expect((await response).status).to.equal(201);",
+              "code": "const response = request(\"https://kasir-api.belajarqa.com\").post(\"/users\").send(user).set(\"Authorization\", `Bearer ${token}`);\nconsole.log(\"status adalah = \" + (await response).status);\nconsole.log(\"Response Body = \");\nconsole.log((await response).body);\nexpect((await response).status).to.equal(201);\nexpect((await response).body.data.userId).not.to.be.null;\nUserID = (await response).body.data.userId;",
               "err": {},
-              "uuid": "ad2f7367-9833-4656-ab76-62a1b2b43420",
-              "parentUUID": "d8903105-e2c9-48d6-9fc2-ab8bcea43798",
+              "uuid": "b0a9b391-773e-4764-be4e-5b92b7e8a65c",
+              "parentUUID": "fa8357a1-b455-407a-a455-e707da217d30",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get User Detail",
+              "fullTitle": "Regist User Get User Detail",
+              "timedOut": false,
+              "duration": 117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = request(\"https://kasir-api.belajarqa.com\").get(`/users/${UserID}`).set(\"Authorization\", `Bearer ${token}`);\nconsole.log(\"status adalah = \" + (await response).status);\nconsole.log(\"Response Body = \");\nconsole.log((await response).body);\nexpect((await response).status).to.equal(200);",
+              "err": {},
+              "uuid": "2cb9b770-7c36-40ac-8e0a-8db35c36bf9d",
+              "parentUUID": "fa8357a1-b455-407a-a455-e707da217d30",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e32c4933-c45f-4e8a-871a-85e075d0673b",
-            "ad2f7367-9833-4656-ab76-62a1b2b43420"
+            "b4a8bfb6-4e13-4a66-9815-0f84e5710bff",
+            "b0a9b391-773e-4764-be4e-5b92b7e8a65c",
+            "2cb9b770-7c36-40ac-8e0a-8db35c36bf9d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 406,
+          "duration": 1504,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 2000
+          "_timeout": 10000
         },
         {
-          "uuid": "e2c20c96-f1a6-4dcf-82e9-2b2d6abaefe0",
+          "uuid": "93857a1f-55d3-46e4-b7a7-9463aea70bbf",
           "title": "Get Request example",
           "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\post.js",
           "file": "\\test\\post.js",
@@ -173,7 +192,7 @@
               "title": "Find Pets by Status",
               "fullTitle": "Get Request example Find Pets by Status",
               "timedOut": false,
-              "duration": 1267,
+              "duration": 1295,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -182,8 +201,8 @@
               "context": null,
               "code": "console.log((await response).status);\nconsole.log((await response).body);",
               "err": {},
-              "uuid": "2dcf7b0d-554d-472f-9097-9766730fb4f8",
-              "parentUUID": "e2c20c96-f1a6-4dcf-82e9-2b2d6abaefe0",
+              "uuid": "2faa14c8-7df9-4577-abf8-70ee031745e0",
+              "parentUUID": "93857a1f-55d3-46e4-b7a7-9463aea70bbf",
               "isHook": false,
               "skipped": false
             },
@@ -191,7 +210,7 @@
               "title": "Equal Status must be 200",
               "fullTitle": "Get Request example Equal Status must be 200",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -200,27 +219,27 @@
               "context": null,
               "code": "expect((await response).status).to.equal(200);",
               "err": {},
-              "uuid": "7745b173-f935-4646-969b-e5be10d74bb1",
-              "parentUUID": "e2c20c96-f1a6-4dcf-82e9-2b2d6abaefe0",
+              "uuid": "f8ea7f78-642f-48f8-a167-1552c40b8b3b",
+              "parentUUID": "93857a1f-55d3-46e4-b7a7-9463aea70bbf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2dcf7b0d-554d-472f-9097-9766730fb4f8",
-            "7745b173-f935-4646-969b-e5be10d74bb1"
+            "2faa14c8-7df9-4577-abf8-70ee031745e0",
+            "f8ea7f78-642f-48f8-a167-1552c40b8b3b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1268,
+          "duration": 1295,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 2000
+          "_timeout": 10000
         },
         {
-          "uuid": "603543db-be93-45cc-8b7d-32018b460054",
+          "uuid": "64216bd1-067e-4b21-8061-1fec869e0176",
           "title": "Post Request Example",
           "fullFile": "C:\\Users\\Nia Yusniati\\API Sanber\\API-Automation-with-Mocha-Chai\\test\\post.js",
           "file": "\\test\\post.js",
@@ -231,7 +250,7 @@
               "title": "Success create user",
               "fullTitle": "Post Request Example Success create user",
               "timedOut": false,
-              "duration": 1376,
+              "duration": 1321,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -240,23 +259,23 @@
               "context": null,
               "code": "console.log((await response).status);\nconsole.log((await response).body);\nexpect((await response).body.message).to.equal(\"12345\");",
               "err": {},
-              "uuid": "ef57b4b7-fa48-4af4-b5e1-95ceb0df5acf",
-              "parentUUID": "603543db-be93-45cc-8b7d-32018b460054",
+              "uuid": "55f2312e-f213-4e58-9bfb-b232b8e0eff3",
+              "parentUUID": "64216bd1-067e-4b21-8061-1fec869e0176",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ef57b4b7-fa48-4af4-b5e1-95ceb0df5acf"
+            "55f2312e-f213-4e58-9bfb-b232b8e0eff3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1376,
+          "duration": 1321,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 2000
+          "_timeout": 10000
         }
       ],
       "passes": [],
@@ -266,7 +285,7 @@
       "duration": 0,
       "root": true,
       "rootEmpty": true,
-      "_timeout": 2000
+      "_timeout": 10000
     }
   ],
   "meta": {

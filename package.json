@@ -4,8 +4,8 @@
   "description": "API Automation With Mocha Chai",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "test:awesome": "mocha --reporter mochawesome || true",
+    "test": "mocha --timeout 10000",
+    "test:awesome": "mocha  --timeout 10000 --reporter mochawesome || true",
     "open:report": "open mochawesome-report/mochawesome.html"
   },
   "repository": {

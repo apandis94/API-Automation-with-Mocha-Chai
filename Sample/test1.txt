@@ -1,0 +1,54 @@
+const request = require("supertest");
+const { expect } = require("chai");
+
+// Request Body
+var password = "SUKAJAYA10";
+var email1 = "kelontong.murah@gmail.com";
+
+var auth = {
+  email: email1,
+  password: password,
+};
+
+var user = {
+  name: "Task 1 Sanber",
+  email: "task1sanber@gmail.com",
+  password: "SUKAJAYA10",
+};
+
+describe("Restful Booker API Tests", () => {
+  var token;
+
+  before(function (done) {
+    request("https://kasir-api.belajarqa.com")
+      .post("/authentications")
+      .send(auth)
+      .set("Accept", "application/json")
+      .set("Content-Type", "application/json")
+      .end(function (err, res) {
+        expect(res.status).to.equal(201);
+        expect(res.body.data.accesToken).not.to.be.null;
+        token = res.body.data.accesToken;
+        console.log(res);
+        if (err) {
+          throw err;
+        }
+        done();
+      });
+  });
+
+  it("Find Status and Body", (done) => {
+    console.log(token);
+    request("https://kasir-api.belajarqa.com")
+      .post("/users")
+      .send(user)
+      .set("Authorization", `Bearer ${token}`)
+      .set("Accept", "application/json")
+      .set("Content-Type", "application/json")
+      .end(function (err, res) {
+        expect(res.statusCode).to.be.equal(401);
+        console.log(res);
+        done();
+      });
+  });
+});
