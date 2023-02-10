@@ -2,11 +2,14 @@ const request = require("supertest");
 const { expect } = require("chai");
 const auth = require("../data/auth.json");
 const addunit = require("../data/unit.json");
+const editunit = require("../data/editunit.json");
 
 let token;
 let UnitID;
+let EditData;
+let DeleteData;
 
-describe("Regist User", () => {
+describe("Regist Unit", () => {
   const response = request("https://kasir-api.belajarqa.com").post("/authentications").send(auth);
   it("Geth Auth", async () => {
     console.log((await response).status);
@@ -44,8 +47,41 @@ describe("Regist User", () => {
       assert(response.body.hasOwnProperty("status"));
       assert(response.body.hasOwnProperty("data"));
     });
-    ex(function (err, res) {
+    expect(function (err, response) {
       if (err) throw err;
     });
+  });
+
+  it("Update Unit", async () => {
+    const response = request("https://kasir-api.belajarqa.com").put(`/units/${UnitID}`).send(editunit).set("Authorization", `Bearer ${token}`);
+    console.log("status adalah = " + (await response).status);
+    console.log("Response Body = ");
+    console.log((await response).body);
+    expect((await response).status).to.equal(200);
+    expect(function (response) {
+      assert(response.body.hasOwnProperty("status"));
+      assert(response.body.hasOwnProperty("message"));
+      assert(response.body.hasOwnProperty("data"));
+    });
+    EditData = (await response).body.data.name;
+    console.log("-------------------------");
+    console.log("Update Nama Baru adalah = ");
+    console.log(EditData);
+  });
+
+  it("Delete Unit", async () => {
+    const response = request("https://kasir-api.belajarqa.com").delete(`/units/${UnitID}`).set("Authorization", `Bearer ${token}`);
+    console.log("status adalah = " + (await response).status);
+    console.log("Response Body = ");
+    console.log((await response).body);
+    expect((await response).status).to.equal(200);
+    expect(function (response) {
+      assert(response.body.hasOwnProperty("status"));
+      assert(response.body.hasOwnProperty("data"));
+    });
+    DeleteData = (await response).body.status;
+    console.log("-------------------------");
+    console.log("Status delete data adalah = ");
+    console.log(DeleteData);
   });
 });
